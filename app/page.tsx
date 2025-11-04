@@ -120,7 +120,7 @@ export default function Home() {
                   priority
                 />
                 <div className="flex-1 min-w-0">
-                  <h1 className="text-xs sm:text-sm lg:text-lg font-normal text-[#1f3c8f] leading-tight" style={{ fontFamily: 'var(--font-roboto-slab)' }}>
+                  <h1 className="text-sm sm:text-base lg:text-xl font-normal text-[#1f3c8f] leading-tight" style={{ fontFamily: 'var(--font-roboto-slab)' }}>
                     <span className="hidden sm:inline">Управління інформаційно-</span>
                     <span className="sm:hidden">Управління інформаційно-<br />комунікаційною діяльністю</span>
                     <br className="hidden sm:block lg:hidden" />
@@ -214,7 +214,7 @@ export default function Home() {
               </div>
               <a
                 href="#contact"
-                className="rounded-full bg-[#1f3c8f] px-6 py-2 text-sm font-semibold text-white shadow-md transition hover:bg-[#1a2f70]"
+                className="rounded-full bg-[#1f3c8f] px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-md transition hover:bg-[#1a2f70]"
               >
                 Подати заявку
               </a>
@@ -260,7 +260,7 @@ export default function Home() {
                 <a
                   href="#contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block mx-4 mt-4 rounded-full bg-[#1f3c8f] px-6 py-3 text-sm font-semibold text-white text-center shadow-md transition hover:bg-[#1a2f70]"
+                  className="block mx-4 mt-4 rounded-full bg-[#1f3c8f] px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold text-white text-center shadow-md transition hover:bg-[#1a2f70]"
                 >
                   Подати заявку
                 </a>
@@ -343,10 +343,10 @@ export default function Home() {
             <Building className="w-full h-full text-white/30" weight="regular" />
           </div>
         </div>
-        <div className="mx-auto max-w-7xl px-4 pt-12 pb-0 sm:px-6 sm:pt-16 lg:px-8 relative z-10">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end">
             {/* Text Content */}
-            <div className="text-center lg:text-left pb-12 sm:pb-16 relative z-10">
+            <div className="text-center lg:text-left pb-8 sm:pb-12 relative z-10">
               <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl animate-text-appear">
                 Управління інформаційно-<br className="hidden sm:block" />
                 комунікаційною діяльністю
@@ -357,13 +357,13 @@ export default function Home() {
               <div className="mt-8 flex items-center justify-center lg:justify-start gap-x-6">
                 <a
                   href="#program-info"
-                  className="rounded-full bg-white px-6 py-3 text-base font-semibold text-[#1f3c8f] shadow-lg transition hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="rounded-full bg-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold text-[#1f3c8f] shadow-lg transition hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   Дізнатися більше
                 </a>
                 <a
                   href="#contact"
-                  className="text-base font-semibold leading-6 text-white ring-2 ring-white/30 hover:ring-white/50 hover:bg-white/10 rounded-full px-6 py-3 transition"
+                  className="text-sm sm:text-base font-semibold leading-6 text-white ring-2 ring-white/30 hover:ring-white/50 hover:bg-white/10 rounded-full px-6 py-3 sm:px-8 sm:py-4 transition"
                 >
                   Зв'язатися з нами <span aria-hidden="true">→</span>
                 </a>
@@ -374,9 +374,9 @@ export default function Home() {
               <Image
                 src="/image/people.png"
                 alt="Студенти та випускники програми"
-                width={2400}
-                height={2400}
-                className="w-full lg:w-[180%] lg:max-w-none lg:ml-auto lg:mr-0 h-auto lg:object-right-bottom"
+                width={1200}
+                height={1200}
+                className="w-full lg:w-[120%] lg:max-w-none lg:ml-auto lg:mr-0 h-auto lg:object-right-bottom"
                 priority
                 unoptimized={false}
               />
@@ -845,10 +845,10 @@ export default function Home() {
             <Building className="w-full h-full text-white/30" weight="regular" />
           </div>
         </div>
-        <div className="mx-auto max-w-7xl px-4 pt-12 pb-0 sm:px-6 sm:pt-16 lg:px-8 relative z-10">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end">
             {/* Left: Text Content */}
-            <div className="text-center lg:text-left pb-12 sm:pb-16 relative z-10">
+            <div className="text-center lg:text-left pb-8 sm:pb-12 relative z-10">
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6 animate-text-appear">
                 Вартість навчання за рік:<br />
                 26 300 гривень
@@ -860,13 +860,13 @@ export default function Home() {
               <div className="mt-8 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 sm:gap-4">
                 <a
                   href="#contact"
-                  className="rounded-full bg-white px-8 py-4 text-base font-semibold text-[#1f3c8f] shadow-lg transition hover:bg-white/90"
+                  className="rounded-full bg-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold text-[#1f3c8f] shadow-lg transition hover:bg-white/90"
                 >
                   Подати заявку
                 </a>
                 <a
                   href="mailto:info@university.edu.ua"
-                  className="text-base font-semibold leading-6 text-white ring-2 ring-white/30 hover:ring-white/50 rounded-full px-8 py-4 transition"
+                  className="text-sm sm:text-base font-semibold leading-6 text-white ring-2 ring-white/30 hover:ring-white/50 rounded-full px-6 py-3 sm:px-8 sm:py-4 transition"
                 >
                   Дізнатися більше
                 </a>
