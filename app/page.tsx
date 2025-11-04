@@ -343,10 +343,10 @@ export default function Home() {
             <Building className="w-full h-full text-white/30" weight="regular" />
           </div>
         </div>
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
+        <div className="mx-auto max-w-7xl px-4 pt-12 pb-0 sm:px-6 sm:pt-16 sm:pb-0 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end">
             {/* Text Content */}
-            <div className="text-center lg:text-left pb-8 sm:pb-12 relative z-10">
+            <div className="text-center lg:text-left pb-12 sm:pb-16 relative z-10">
               <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl animate-text-appear">
                 Управління інформаційно-<br className="hidden sm:block" />
                 комунікаційною діяльністю
@@ -845,10 +845,10 @@ export default function Home() {
             <Building className="w-full h-full text-white/30" weight="regular" />
           </div>
         </div>
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
+        <div className="mx-auto max-w-7xl px-4 pt-12 pb-0 sm:px-6 sm:pt-16 sm:pb-0 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end">
             {/* Left: Text Content */}
-            <div className="text-center lg:text-left pb-8 sm:pb-12 relative z-10">
+            <div className="text-center lg:text-left pb-12 sm:pb-16 relative z-10">
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6 animate-text-appear">
                 Вартість навчання за рік:<br />
                 26 300 гривень
