@@ -179,34 +179,34 @@ export default function Home() {
 
         {/* Bottom Navigation Bar */}
         <nav className="bg-gray-100">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 lg:pt-0">
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex h-14 items-center justify-between">
+            <div className="hidden lg:flex h-16 items-center justify-between py-2">
               <div className="flex items-center gap-6 lg:gap-8">
                 <a
                   href="#program-info"
-                  className="flex items-center gap-2 text-sm font-medium text-[#1f3c8f] transition hover:text-[#1a2f70]"
+                  className="flex items-center gap-2 text-base font-medium text-[#1f3c8f] transition hover:text-[#1a2f70]"
                 >
                   <FileText className="h-[1em] w-[1em]" weight="regular" />
                   Про програму
                 </a>
                 <a
                   href="#features"
-                  className="flex items-center gap-2 text-sm font-medium text-[#1f3c8f] transition hover:text-[#1a2f70]"
+                  className="flex items-center gap-2 text-base font-medium text-[#1f3c8f] transition hover:text-[#1a2f70]"
                 >
                   <Sparkle className="h-[1em] w-[1em]" weight="regular" />
                   Особливості
                 </a>
                 <a
                   href="#career"
-                  className="flex items-center gap-2 text-sm font-medium text-[#1f3c8f] transition hover:text-[#1a2f70]"
+                  className="flex items-center gap-2 text-base font-medium text-[#1f3c8f] transition hover:text-[#1a2f70]"
                 >
                   <Briefcase className="h-[1em] w-[1em]" weight="regular" />
                   Кар'єра
                 </a>
                 <a
                   href="#contact"
-                  className="flex items-center gap-2 text-sm font-medium text-[#1f3c8f] transition hover:text-[#1a2f70]"
+                  className="flex items-center gap-2 text-base font-medium text-[#1f3c8f] transition hover:text-[#1a2f70]"
                 >
                   <Envelope className="h-[1em] w-[1em]" weight="regular" />
                   Контакти
@@ -214,7 +214,7 @@ export default function Home() {
               </div>
               <a
                 href="#contact"
-                className="rounded-full bg-[#1f3c8f] px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-md transition hover:bg-[#1a2f70]"
+                className="rounded-full bg-[#1f3c8f] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#1a2f70]"
               >
                 Подати заявку
               </a>
@@ -376,7 +376,7 @@ export default function Home() {
                 alt="Студенти та випускники програми"
                 width={1200}
                 height={1200}
-                className="w-full lg:w-[120%] lg:max-w-none lg:ml-auto lg:mr-0 h-auto lg:object-right-bottom"
+                className="w-full lg:w-[100%] lg:max-w-none lg:ml-auto lg:mr-0 h-auto lg:object-right-bottom"
                 priority
                 unoptimized={false}
               />
@@ -879,7 +879,7 @@ export default function Home() {
                 alt="Студенти та випускники програми"
                 width={600}
                 height={600}
-                className="w-full lg:w-[180%] lg:max-w-none lg:ml-auto lg:mr-0 h-auto lg:object-right-bottom"
+                className="w-full lg:w-[140%] lg:max-w-none lg:ml-auto lg:mr-0 h-auto lg:object-right-bottom"
                 priority
               />
             </div>
