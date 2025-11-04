@@ -178,7 +178,7 @@ export default function Home() {
         </div>
 
         {/* Bottom Navigation Bar */}
-        <nav className="bg-gray-100">
+        <nav className={`bg-gray-100 ${mobileMenuOpen ? '' : 'hidden lg:block'}`}>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 lg:pt-0">
             {/* Desktop Navigation */}
             <div className="hidden lg:flex h-16 items-center justify-between py-2">
@@ -376,7 +376,7 @@ export default function Home() {
                 alt="Студенти та випускники програми"
                 width={1200}
                 height={1200}
-                className="w-full lg:w-[100%] lg:max-w-none lg:ml-auto lg:mr-0 h-auto lg:object-right-bottom"
+                className="w-full lg:w-[300%] lg:max-w-none lg:ml-auto lg:mr-0 h-auto lg:object-right-bottom"
                 priority
                 unoptimized={false}
               />
@@ -551,11 +551,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Career Opportunities - Interactive Map */}
+      {/* Career Opportunities */}
       <section id="career" className="py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-left">
-            <h2 className="text-3xl font-bold tracking-tight text-[#1f3c8f] sm:text-4xl animate-text-appear">
+            <h2 className="text-3xl font-bold tracking-tight text-[#1f3c8f] sm:text-4xl">
               Кар'єрні можливості
             </h2>
           </div>
@@ -565,10 +565,13 @@ export default function Home() {
             <div className="hidden lg:block">
               {/* Central Node - Program */}
               <div className="mb-8 sm:mb-12">
-                <div className="rounded-2xl bg-[#1f3c8f] px-6 sm:px-8 py-4 sm:py-5 shadow-xl w-full animate-text-appear">
+                <div className="rounded-2xl bg-[#1f3c8f] px-6 sm:px-8 py-4 sm:py-5 w-full">
                   <h3 className="text-xl font-bold text-white text-center leading-tight">
-                    Магістр з інформаційної,<br />бібліотечної та архівної справ
+                    Магістр з інформаційної, бібліотечної та архівної справ
                   </h3>
+                  <p className="text-sm text-white/90 text-center mt-2">
+                    Освітня кваліфікація, що відкриває широкі кар'єрні можливості
+                  </p>
                 </div>
               </div>
 
@@ -576,9 +579,11 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-6 lg:gap-8">
                 {/* Public Sector Column */}
                 <div className="space-y-5 sm:space-y-6">
-                  <div className="rounded-xl bg-white px-5 sm:px-6 py-3 sm:py-4 shadow-lg ring-2 ring-[#1f3c8f]/30 text-center animate-text-appear-delay-1">
+                  <div className="rounded-xl bg-white px-5 sm:px-6 py-3 sm:py-4 ring-2 ring-[#1f3c8f]/30 text-center">
                     <div className="flex items-center justify-center gap-3">
-                      <Building className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
+                      <div className="p-2 bg-gray-100 rounded-lg">
+                        <Building className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
+                      </div>
                       <h4 className="text-lg font-bold text-[#1f3c8f]">
                         Публічний сектор
                       </h4>
@@ -587,37 +592,37 @@ export default function Home() {
                   
                   <div className="space-y-3 sm:space-y-4 pl-4 sm:pl-6 border-l-4 border-[#1f3c8f]/20">
                     {/* Specialization 1 */}
-                    <div className="rounded-lg bg-[#f3f6f7] px-4 sm:px-5 py-3 sm:py-4 shadow-md ring-1 ring-gray-300 hover:shadow-lg hover:ring-[#1f3c8f]/30 transition-all cursor-pointer animate-text-appear-delay-2">
+                    <div className="rounded-lg bg-[#f3f6f7] px-4 sm:px-5 py-3 sm:py-4 ring-1 ring-gray-300">
                       <div className="flex gap-3 sm:gap-4 items-start">
-                        <div className="flex-shrink-0 mt-1">
+                        <div className="flex-shrink-0 mt-1 p-2 bg-gray-100 rounded-lg">
                           <Books className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
                         </div>
                         <p className="text-sm lg:text-base font-medium leading-relaxed flex-1" style={{ color: '#434445' }}>
-                          Бібліотекар-аналітик у бібліотеках та інформаційних центрах
+                          Бібліотекар-аналітик<br />у бібліотеках та інформаційних центрах
                         </p>
                       </div>
                     </div>
                     
                     {/* Specialization 2 */}
-                    <div className="rounded-lg bg-[#f3f6f7] px-4 sm:px-5 py-3 sm:py-4 shadow-md ring-1 ring-gray-300 hover:shadow-lg hover:ring-[#1f3c8f]/30 transition-all cursor-pointer animate-text-appear-delay-2" style={{ animationDelay: '0.25s' }}>
+                    <div className="rounded-lg bg-[#f3f6f7] px-4 sm:px-5 py-3 sm:py-4 ring-1 ring-gray-300">
                       <div className="flex gap-3 sm:gap-4 items-start">
-                        <div className="flex-shrink-0 mt-1">
+                        <div className="flex-shrink-0 mt-1 p-2 bg-gray-100 rounded-lg">
                           <Archive className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
                         </div>
                         <p className="text-sm lg:text-base font-medium leading-relaxed flex-1" style={{ color: '#434445' }}>
-                          Архівіст-дослідник у державних та муніципальних архівах
+                          Архівіст-дослідник<br />у державних та муніципальних архівах
                         </p>
                       </div>
                     </div>
                     
                     {/* Specialization 3 */}
-                    <div className="rounded-lg bg-[#f3f6f7] px-4 sm:px-5 py-3 sm:py-4 shadow-md ring-1 ring-gray-300 hover:shadow-lg hover:ring-[#1f3c8f]/30 transition-all cursor-pointer animate-text-appear-delay-2" style={{ animationDelay: '0.3s' }}>
+                    <div className="rounded-lg bg-[#f3f6f7] px-4 sm:px-5 py-3 sm:py-4 ring-1 ring-gray-300">
                       <div className="flex gap-3 sm:gap-4 items-start">
-                        <div className="flex-shrink-0 mt-1">
+                        <div className="flex-shrink-0 mt-1 p-2 bg-gray-100 rounded-lg">
                           <GraduationCap className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
                         </div>
                         <p className="text-sm lg:text-base font-medium leading-relaxed flex-1" style={{ color: '#434445' }}>
-                          Інформаційний спеціаліст у наукових та освітніх установах
+                          Інформаційний спеціаліст<br />у наукових та освітніх установах
                         </p>
                       </div>
                     </div>
@@ -626,9 +631,11 @@ export default function Home() {
 
                 {/* Private Sector Column */}
                 <div className="space-y-5 sm:space-y-6">
-                  <div className="rounded-xl bg-white px-5 sm:px-6 py-3 sm:py-4 shadow-lg ring-2 ring-[#1f3c8f]/30 text-center animate-text-appear-delay-1" style={{ animationDelay: '0.15s' }}>
+                  <div className="rounded-xl bg-white px-5 sm:px-6 py-3 sm:py-4 ring-2 ring-[#1f3c8f]/30 text-center">
                     <div className="flex items-center justify-center gap-3">
-                      <Briefcase className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
+                      <div className="p-2 bg-gray-100 rounded-lg">
+                        <Briefcase className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
+                      </div>
                       <h4 className="text-lg font-bold text-[#1f3c8f]">
                         Приватний сектор
                       </h4>
@@ -637,37 +644,37 @@ export default function Home() {
                   
                   <div className="space-y-3 sm:space-y-4 pl-4 sm:pl-6 border-l-4 border-[#1f3c8f]/20">
                     {/* Specialization 1 */}
-                    <div className="rounded-lg bg-[#f3f6f7] px-4 sm:px-5 py-3 sm:py-4 shadow-md ring-1 ring-gray-300 hover:shadow-lg hover:ring-[#1f3c8f]/30 transition-all cursor-pointer animate-text-appear-delay-2" style={{ animationDelay: '0.35s' }}>
+                    <div className="rounded-lg bg-[#f3f6f7] px-4 sm:px-5 py-3 sm:py-4 ring-1 ring-gray-300">
                       <div className="flex gap-3 sm:gap-4 items-start">
-                        <div className="flex-shrink-0 mt-1">
+                        <div className="flex-shrink-0 mt-1 p-2 bg-gray-100 rounded-lg">
                           <Code className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
                         </div>
                         <p className="text-sm lg:text-base font-medium leading-relaxed flex-1" style={{ color: '#434445' }}>
-                          IT-консультант у IT-компаніях та технологічних стартапах
+                          IT-консультант<br />у IT-компаніях та технологічних стартапах
                         </p>
                       </div>
                     </div>
                     
                     {/* Specialization 2 */}
-                    <div className="rounded-lg bg-[#f3f6f7] px-4 sm:px-5 py-3 sm:py-4 shadow-md ring-1 ring-gray-300 hover:shadow-lg hover:ring-[#1f3c8f]/30 transition-all cursor-pointer animate-text-appear-delay-2" style={{ animationDelay: '0.4s' }}>
+                    <div className="rounded-lg bg-[#f3f6f7] px-4 sm:px-5 py-3 sm:py-4 ring-1 ring-gray-300">
                       <div className="flex gap-3 sm:gap-4 items-start">
-                        <div className="flex-shrink-0 mt-1">
+                        <div className="flex-shrink-0 mt-1 p-2 bg-gray-100 rounded-lg">
                           <ChartBar className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
                         </div>
                         <p className="text-sm lg:text-base font-medium leading-relaxed flex-1" style={{ color: '#434445' }}>
-                          Data Analyst у медіа та комунікаційних агентствах
+                          Data Analyst<br />у медіа та комунікаційних агентствах
                         </p>
                       </div>
                     </div>
                     
                     {/* Specialization 3 */}
-                    <div className="rounded-lg bg-[#f3f6f7] px-4 sm:px-5 py-3 sm:py-4 shadow-md ring-1 ring-gray-300 hover:shadow-lg hover:ring-[#1f3c8f]/30 transition-all cursor-pointer animate-text-appear-delay-2" style={{ animationDelay: '0.45s' }}>
+                    <div className="rounded-lg bg-[#f3f6f7] px-4 sm:px-5 py-3 sm:py-4 ring-1 ring-gray-300">
                       <div className="flex gap-3 sm:gap-4 items-start">
-                        <div className="flex-shrink-0 mt-1">
+                        <div className="flex-shrink-0 mt-1 p-2 bg-gray-100 rounded-lg">
                           <ChatCircle className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
                         </div>
                         <p className="text-sm lg:text-base font-medium leading-relaxed flex-1" style={{ color: '#434445' }}>
-                          Комунікаційний менеджер у корпоративних інформаційних службах
+                          Комунікаційний менеджер<br />у корпоративних інформаційних службах
                         </p>
                       </div>
                     </div>
@@ -679,52 +686,57 @@ export default function Home() {
             {/* Mobile/Tablet View */}
             <div className="lg:hidden space-y-6 sm:space-y-8">
               {/* Central Program */}
-              <div className="rounded-2xl bg-[#1f3c8f] px-5 sm:px-6 py-4 sm:py-5 shadow-xl text-center w-full animate-text-appear">
+              <div className="rounded-2xl bg-[#1f3c8f] px-5 sm:px-6 py-4 sm:py-5 text-center w-full">
                 <h3 className="text-xl font-bold text-white leading-tight">
                   Магістр з інформаційної, бібліотечної та архівної справ
                 </h3>
+                <p className="text-xs text-white/90 text-center mt-2">
+                  Освітня кваліфікація, що відкриває широкі кар'єрні можливості
+                </p>
               </div>
 
               {/* Sectors */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
                 {/* Public Sector */}
                 <div className="space-y-3 sm:space-y-4">
-                  <div className="rounded-xl bg-white px-5 sm:px-6 py-3 sm:py-4 shadow-lg ring-2 ring-[#1f3c8f]/30 animate-text-appear-delay-1">
+                  <div className="rounded-xl bg-white px-5 sm:px-6 py-3 sm:py-4 ring-2 ring-[#1f3c8f]/30">
                     <div className="flex items-center justify-center gap-3">
-                      <Building className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
+                      <div className="p-2 bg-gray-100 rounded-lg">
+                        <Building className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
+                      </div>
                       <h4 className="text-lg font-bold text-[#1f3c8f]">
                         Публічний сектор
                       </h4>
                     </div>
                   </div>
                   <div className="space-y-3 pl-3 sm:pl-4 border-l-2 border-[#1f3c8f]/20">
-                    <div className="rounded-lg bg-[#f3f6f7] px-4 py-3 shadow-sm ring-1 ring-gray-200 animate-text-appear-delay-2">
+                    <div className="rounded-lg bg-[#f3f6f7] px-4 py-3 ring-1 ring-gray-200">
                       <div className="flex gap-3 items-start">
-                        <div className="flex-shrink-0 mt-1">
+                        <div className="flex-shrink-0 mt-1 p-2 bg-gray-100 rounded-lg">
                           <Books className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
                         </div>
                         <p className="text-sm lg:text-base font-medium leading-relaxed flex-1" style={{ color: '#434445' }}>
-                          Бібліотекар-аналітик у бібліотеках та інформаційних центрах
+                          Бібліотекар-аналітик<br />у бібліотеках та інформаційних центрах
                         </p>
                       </div>
                     </div>
-                    <div className="rounded-lg bg-[#f3f6f7] px-4 py-3 shadow-sm ring-1 ring-gray-200 animate-text-appear-delay-2" style={{ animationDelay: '0.25s' }}>
+                    <div className="rounded-lg bg-[#f3f6f7] px-4 py-3 ring-1 ring-gray-200">
                       <div className="flex gap-3 items-start">
-                        <div className="flex-shrink-0 mt-1">
+                        <div className="flex-shrink-0 mt-1 p-2 bg-gray-100 rounded-lg">
                           <Archive className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
                         </div>
                         <p className="text-sm lg:text-base font-medium leading-relaxed flex-1" style={{ color: '#434445' }}>
-                          Архівіст-дослідник у державних та муніципальних архівах
+                          Архівіст-дослідник<br />у державних та муніципальних архівах
                         </p>
                       </div>
                     </div>
-                    <div className="rounded-lg bg-[#f3f6f7] px-4 py-3 shadow-sm ring-1 ring-gray-200 animate-text-appear-delay-2" style={{ animationDelay: '0.3s' }}>
+                    <div className="rounded-lg bg-[#f3f6f7] px-4 py-3 ring-1 ring-gray-200">
                       <div className="flex gap-3 items-start">
-                        <div className="flex-shrink-0 mt-1">
+                        <div className="flex-shrink-0 mt-1 p-2 bg-gray-100 rounded-lg">
                           <GraduationCap className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
                         </div>
                         <p className="text-sm lg:text-base font-medium leading-relaxed flex-1" style={{ color: '#434445' }}>
-                          Інформаційний спеціаліст у наукових та освітніх установах
+                          Інформаційний спеціаліст<br />у наукових та освітніх установах
                         </p>
                       </div>
                     </div>
@@ -733,42 +745,44 @@ export default function Home() {
 
                 {/* Private Sector */}
                 <div className="space-y-3 sm:space-y-4">
-                  <div className="rounded-xl bg-white px-5 sm:px-6 py-3 sm:py-4 shadow-lg ring-2 ring-[#1f3c8f]/30">
+                  <div className="rounded-xl bg-white px-5 sm:px-6 py-3 sm:py-4 ring-2 ring-[#1f3c8f]/30">
                     <div className="flex items-center justify-center gap-3">
-                      <Briefcase className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
+                      <div className="p-2 bg-gray-100 rounded-lg">
+                        <Briefcase className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
+                      </div>
                       <h4 className="text-lg font-bold text-[#1f3c8f]">
                         Приватний сектор
                       </h4>
                     </div>
                   </div>
                   <div className="space-y-3 pl-3 sm:pl-4 border-l-2 border-[#1f3c8f]/20">
-                    <div className="rounded-lg bg-[#f3f6f7] px-4 py-3 shadow-sm ring-1 ring-gray-200 animate-text-appear-delay-2" style={{ animationDelay: '0.35s' }}>
+                    <div className="rounded-lg bg-[#f3f6f7] px-4 py-3 ring-1 ring-gray-200">
                       <div className="flex gap-3 items-start">
-                        <div className="flex-shrink-0 mt-1">
+                        <div className="flex-shrink-0 mt-1 p-2 bg-gray-100 rounded-lg">
                           <Code className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
                         </div>
                         <p className="text-sm lg:text-base font-medium leading-relaxed flex-1" style={{ color: '#434445' }}>
-                          IT-консультант у IT-компаніях та технологічних стартапах
+                          IT-консультант<br />у IT-компаніях та технологічних стартапах
                         </p>
                       </div>
                     </div>
-                    <div className="rounded-lg bg-[#f3f6f7] px-4 py-3 shadow-sm ring-1 ring-gray-200 animate-text-appear-delay-2" style={{ animationDelay: '0.4s' }}>
+                    <div className="rounded-lg bg-[#f3f6f7] px-4 py-3 ring-1 ring-gray-200">
                       <div className="flex gap-3 items-start">
-                        <div className="flex-shrink-0 mt-1">
+                        <div className="flex-shrink-0 mt-1 p-2 bg-gray-100 rounded-lg">
                           <ChartBar className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
                         </div>
                         <p className="text-sm lg:text-base font-medium leading-relaxed flex-1" style={{ color: '#434445' }}>
-                          Data Analyst у медіа та комунікаційних агентствах
+                          Data Analyst<br />у медіа та комунікаційних агентствах
                         </p>
                       </div>
                     </div>
-                    <div className="rounded-lg bg-[#f3f6f7] px-4 py-3 shadow-sm ring-1 ring-gray-200 animate-text-appear-delay-2" style={{ animationDelay: '0.45s' }}>
+                    <div className="rounded-lg bg-[#f3f6f7] px-4 py-3 ring-1 ring-gray-200">
                       <div className="flex gap-3 items-start">
-                        <div className="flex-shrink-0 mt-1">
+                        <div className="flex-shrink-0 mt-1 p-2 bg-gray-100 rounded-lg">
                           <ChatCircle className="h-6 w-6 text-[#1f3c8f]" weight="regular" />
                         </div>
                         <p className="text-sm lg:text-base font-medium leading-relaxed flex-1" style={{ color: '#434445' }}>
-                          Комунікаційний менеджер у корпоративних інформаційних службах
+                          Комунікаційний менеджер<br />у корпоративних інформаційних службах
                         </p>
                       </div>
                     </div>
@@ -879,7 +893,7 @@ export default function Home() {
                 alt="Студенти та випускники програми"
                 width={600}
                 height={600}
-                className="w-full lg:w-[140%] lg:max-w-none lg:ml-auto lg:mr-0 h-auto lg:object-right-bottom"
+                className="w-full lg:w-[70%] lg:max-w-none lg:ml-auto lg:mr-0 h-auto lg:object-right-bottom"
                 priority
               />
             </div>
